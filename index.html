@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            min-height: 100vh;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            background-color:rgb(236, 236, 244) ;
+            
+        }
+        .heart{
+            height: 100px;
+            width: 100px;
+            background-color:red ;
+            position: relative;
+            transform: rotate(-45deg);
+            box-shadow: -10px 10px 90px red ;
+            animation: heart 0.6s linear infinite;
+        }
+        .heart::before{
+            content: '';
+            position: absolute;
+            height:100px ;
+            width:100px;
+            background-color:red;
+            top:-50px;
+            border-radius: 50px;
+            box-shadow: 10px 10px 90px red ;
+        }
+        .heart::after{
+            content: '';
+            position: absolute;
+            height:100px ;
+            width:100px;
+            background-color:red;
+            right:-50px;
+            border-radius: 50px;
+            box-shadow: 10px 10px 90px red ;
+        }
+        @keyframes heart{
+            0%{
+                transform:rotate(-45deg) scale(1.07);
+            }
+            80%{
+                transform:rotate(-45deg) scale(1.0); 
+            }
+            100%{
+                transform:rotate(-45deg) scale(0.8);
+            }
+        }
+        a{
+            z-index:1;
+            font-size: 20px;
+            position: absolute;
+            top:20px;
+            left: 20px;
+            transform: rotate(45deg);
+            text-decoration: none;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+
+ <div class="heart">
+    <a href="./templates.html"> &nbsp;click the  &emsp;heart</a>
+ </div>
+</body>
+</html>

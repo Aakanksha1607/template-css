@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/ac6ee84b93.js" crossorigin="anonymous"></script>
+    <style>
+      .container1{
+        width:100%;
+        height:9vh;
+        border:0px solid;
+        position: fixed;
+        background-color:white;
+        z-index: 2;
+
+        /* border-top-width:100px; */
+        /* border-top-color: white; */
+        /* position:fixed;*/
+      } 
+
+      .content1{
+        width:170px;
+        height:40px;
+        border : 0px solid;
+        font-weight: bold;
+        text-align:center;
+        position:fixed;
+        top:20px;
+        color: rgb(87, 22, 148);
+        left:20px;
+        text-decoration: none;
+        font-size: 24px;
+        padding:4px;
+        cursor:pointer;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      .content1:hover,.content2:hover,.content3:hover,.content4:hover{
+        background-color: gray;
+        color: aquamarine;
+        
+      }
+      .content2{
+        width:170px;
+        height:40px;
+        border : 0px solid;
+        text-align: center;
+        text-decoration: none;
+        position:fixed;
+        top:20px;
+        padding:4px;
+        font-size: 24px;
+        font-weight:bold;
+        right:400px;
+        cursor:pointer;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      .content3{
+        width:170px;
+        height:40px;
+        border : 0px solid;
+        font-weight: bold;
+        text-align: center;
+        position:fixed;
+        text-decoration: none;
+        top:20px;
+        padding:4px;
+        font-size: 24px;
+        right:200px;
+        cursor:pointer;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      .content4{
+        width:170px;
+        height:40px;
+        border : 0px solid;
+        text-align: center;
+        position:fixed;
+        font-weight: bold;
+        top:20px;
+        text-decoration: none;
+        padding:4px;
+        font-size: 24px;
+        right:20px;
+        cursor:pointer;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      .container2{
+        width:100%;
+        height:100vh;
+        border:1px solid;
+      }
+      img{
+        width:100%;
+        height:100vh;
+        margin-bottom: 100px;
+      }
+       span{
+        color: white;
+        background-color:black ;
+        padding: 10px;
+        font-size: 40px;
+        opacity: 0.75;
+      }
+       p{
+        font-size: 40px;
+        position: absolute;
+        left:700px;
+        bottom:300px;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      } 
+      .content5{
+        width:100%;
+        height:40px;
+        border : 0px solid;
+        background-color: rgb(246, 247, 247);
+       text-align:20px;
+        position:absolute;
+        top:850px;
+        padding:4px;
+        font-size: 30px;
+        left:0px;
+        cursor:pointer;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+      }
+      .content6{
+        width:100%;
+        height:40px;
+        border : 0px solid;
+        background-color: rgb(246, 247, 247);
+       text-align:20px;
+        position:absolute;
+       top:1600px;
+        padding:4px;
+        font-size: 30px;
+        left:0px;
+        cursor:pointer;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+       .container3,.container4{
+        display:flex;
+        gap:20px;
+        
+      } 
+      .house1,.house2,.house3,.house4,.house5,.house6,.house7,.house8 {
+        width:400px;
+        height:260px;
+        /* display:grid; */
+        grid-template-columns: repeat(4,400) ;
+        box-shadow: 15px 15px 15px  rgb(58, 56, 56);
+        transition: all 1s ;
+        /* flex-direction: row;  */   
+      }
+      .house1:hover,.house2:hover,.house3:hover,.house4:hover,.house5:hover,.house6:hover,.house7:hover,.house8:hover{
+        cursor: pointer;
+        box-shadow:10px 10px 10px rgb(11, 113, 133) ;
+        /* transition:all 4s ease-out;  */
+      }
+      .h1,.h2,.h3,.h4{
+        position: absolute;
+        top:913px;
+        border:0px solid;
+        background-color: black;
+        color: cornsilk;
+        padding:10px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      .h5,.h6,.h7,.h8{
+        position: absolute;
+        top:1277px;
+        border:0px solid;
+        background-color: rgb(19, 19, 19);
+        color: cornsilk;
+        padding:10px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+     .text{
+      font-size: 30px;
+      text-shadow: 3px 0px 3px rgb(37, 37, 37) ;
+      text-decoration: underline; 
+     }
+     .image1,.image2,.image3,.image4{
+      width:400px;
+      height:300px;
+      grid-template-columns: repeat(4,400) ;
+      box-shadow: 15px 15px 15px  rgb(58, 56, 56);
+      transition: all 3s;
+
+     }
+     .image1:hover,.image2:hover,.image3:hover,.image4:hover{
+      cursor: pointer;
+      box-shadow: 20px 20px 20px  rgb(45, 246, 27);
+     }
+     .images{
+      padding-top: 50px;
+      display:flex;
+      flex-direction: row;
+      gap:20px;
+     }
+     .cont{
+      border:2px solid;
+      height:20px;
+      text-align: center;
+      padding:10px;
+      font-size: 20px;
+      background-color:navajowhite;
+      font-weight: bold;
+     }
+     .cont:hover{
+      background-color: gray;
+      cursor: pointer;
+     }
+     .content7{
+        width:100%;
+        height:40px;
+        border : 0px solid;
+        background-color: rgb(246, 247, 247);
+       text-align:20px;
+        position:absolute;
+        top:2560px;
+        padding:4px;
+        font-size: 30px;
+        left:0px;
+        cursor:pointer;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     }
+     #name,#email,#subject,#comment{
+      border:2px solid;
+      width:100%;
+      height:40px;
+      
+     }
+     input::placeholder{
+      color:brown;
+      font-size: 20px;
+     }
+     .message{
+      border:2px solid;
+      width:150px;
+      padding:10px;
+      text-align: center;
+      background-color: blue;
+      color: beige;
+     }
+     .message:hover{
+      background-color: brown;
+      color:rgb(228, 184, 28);
+     }
+     .icons{
+      font-size: 30px;
+      text-align: center;
+      border:0px solid;
+      height:50px;
+      
+      background-color: rgb(200, 200, 197);
+   
+     }
+   
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="container1">
+        <a class="content1" href="#">BR Architects</a>
+       <a class="content2" href="#Project">Projects</a>
+       <a class="content3" href="#About">About</a>
+       <a class="content4" href="#Contact">Contact</a>
+      </div>
+    
+      <div class="container2">
+        <div>
+        <img src="https://www.w3schools.com/w3images/architect.jpg" alt="">
+        <p><span>B R</span> Architecture</p>
+      </div>
+      <!--       project section    -->
+      <div class="container3">
+       <div class="content5" id="Project"> &emsp; &nbsp;Projects</div>
+        <div>
+          <img class="house1" src="https://www.w3schools.com/w3images/house5.jpg"  style="transition: width 2s;" alt="">
+          <h4 class="h1">Summer House</h4>
+        </div>
+        <div>
+        <img class="house2" src="https://www.w3schools.com/w3images/house2.jpg" alt="">
+        <h4 class="h2">Brick House</h4>
+        </div>
+        <div>
+        <img class="house3" src="https://www.w3schools.com/w3images/house3.jpg" alt="">
+        <h4 class="h3">Renovated</h4>
+        </div>
+        <div>
+        <img class="house4" src="https://www.w3schools.com/w3images/house4.jpg" alt="">
+        <h4 class="h4">Barn House</h4> 
+        </div>
+      </div>
+      <div class="container4">
+        <div>
+          <img  class="house5" src="https://www.w3schools.com/w3images/house2.jpg" alt="">
+          <h4 class="h5">Summer House</h4>
+        </div>
+        <div>
+          <img  class="house6" src="https://www.w3schools.com/w3images/house5.jpg" alt="">
+          <h4 class="h6">Brick House</h4>
+        </div>
+        <div>
+          <img  class="house7" src="https://www.w3schools.com/w3images/house4.jpg" alt="">
+          <h4 class="h7">Renovated</h4>
+        </div>
+        <div>
+          <img  class="house8" src="https://www.w3schools.com/w3images/house3.jpg" alt="">
+          <h4 class="h8">Barn House</h4>
+        </div>
+      </div>
+      <!--     About section   -->
+      <div class="container5">
+        <div class="content6" id="About"> &emsp; &nbsp;About</div>
+        <div class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos atque fuga veritatis ipsa id sunt nisi. Assumenda eaque atque deleniti ab repudiandae provident nam nesciunt, amet aliquam molestiae nulla iure.
+          Expedita eveniet ab, dicta nihil laboriosam asperiores deleniti officiis cum unde doloribus cumque veritatis ipsa, culpa quis quidem! Labore totam quisquam voluptate itaque rerum dolor saepe, quibusdam obcaecati nulla nihil.
+          Obcaecati necessitatibus nam, a blanditiis, nihil sed consectetur at quaerat libero reiciendis amet atque rem alias, porro nisi. Cupiditate incidunt, neque exercitationem ut vel quod itaque harum odit aspernatur laborum?
+        </div>
+        <div class="images">
+           <div>
+            <img  class="image1" src="https://www.w3schools.com/w3images/team2.jpg" width="100px" alt="">
+             <div style="font-size: 30px; text-shadow: 2px 2px 2px rgb(212, 53, 53);text-decoration: underline; ">
+              <b>John Deo </b></div> <br>
+             <div style="font-size: 20px; color: rgb(79, 79, 79);"> <b>CEO & FOUNDER</b></div> <br>
+             <div style="font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-shadow: 2px 1px 2px rgb(44, 43, 43);">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum</div><br>
+             <div class="cont">Contact</div>
+          </div>
+          <div>
+            <img  class="image2" src="https://www.w3schools.com/w3images/team1.jpg" width="100px" alt="">
+            <div style="font-size: 30px; text-shadow: 2px 2px 2px rgb(215, 41, 41);text-decoration: underline; ">
+              <b>Jane Deo </b></div> <br>
+             <div style="font-size: 20px; color: rgb(79, 79, 79);"> <b>Architect</b></div> <br>
+             <div style="font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-shadow: 2px 1px 2px rgb(44, 43, 43);">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum</div><br>
+             <div class="cont" >Contact</div>
+            
+          </div>
+          <div>
+            <img  class="image3" src="https://www.w3schools.com/w3images/team3.jpg" width="100px" alt="">
+            <div style="font-size: 30px; text-shadow: 2px 2px 2px rgb(212, 53, 53);text-decoration: underline; ">
+              <b>Mike Ross </b></div><br>
+             <div style="font-size: 20px;  color: rgb(79, 79, 79);"> <b>Architect</b></div><br>
+             <div style="font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-shadow: 2px 1px 2px rgb(44, 43, 43);">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum</div> <br>
+             <div class="cont" >Contact</div>
+          </div>
+          <div>
+            <img  class="image4" src="https://www.w3schools.com/w3images/team4.jpg" width="100px" alt="">
+            <div style="font-size: 30px; text-shadow: 2px 2px 2px rgb(212, 53, 53);text-decoration: underline; ">
+              <b>Dan Star </b></div><br>
+             <div style="font-size: 20px;  color: rgb(79, 79, 79);"> <b>Architect</b></div><br>
+             <div style="font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-shadow: 2px 1px 2px rgb(44, 43, 43);">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum</div><br>
+             <div class="cont" >Contact</div>
+          </div>
+        </div>
+        <!--        contact section     -->
+        
+        <div class="container6">
+          <div class="content7" id="Contact">&emsp; &nbsp;Contact</div>
+          <div style="font-size: 20px;"> 
+          <br> <br> <br> <br>Lets get in touch and talk about your next project
+          </div> <br> 
+          <div>
+            <input type="text" id="name" placeholder="Enter Your Name"><br><br>
+            <input type="email" id="email" placeholder="Email"><br><br>
+            <input type="text" id="subject" placeholder="Subject"><br><br>
+            <input type="text" id="comment" placeholder="Comment"><br><br>
+            <div class="message">SEND MESSAGE</div><br><br><br><br>
+          </div>
+        </div>
+       <div>
+         <img src="https://www.w3schools.com/w3images/map.jpg" alt="">
+       </div>
+       <div class="container7">
+        <div class="icons">
+          <i class="fa-brands fa-instagram" ></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-twitter" ></i>
+        </div>
+       
+      </div>  
+    </div>
+</body>
+</html>
+        
